@@ -1,20 +1,10 @@
 import {createStore, applyMiddleware} from 'redux';
+import reducer from './reducer';
 
 
-const initialState = {
-    allPuppies: [  { id: 1, name: 'Cody' },
-    { id: 2, name: 'Ben' },
-    { id: 3, name: 'Bubba' }
-    ]
-};
 
 
-const reducer = (state = initialState, action) => {
-    switch(action.type){
-        default: 
-            return state;
-    }
-};
+
 
 const store = createStore(reducer);
 
