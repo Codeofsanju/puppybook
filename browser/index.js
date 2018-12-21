@@ -2,16 +2,22 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AllPuppies from './AllPuppies';
 import store from './store';
 import {Provider} from 'react-redux';
 import AllPuppiesContainer from './AllPuppiesContainer';
+import {HashRouter as Router, Switch, Route} from 'react-router-dom';
 
 ReactDOM.render(
   <div className="container flexbox-container">
     <div className="jumbotron">
   <Provider store = {store}>
-      <AllPuppiesContainer />
+    <Router>
+      <main>
+        <Switch>
+          <Route exact path = "/puppies" component = {AllPuppiesContainer}/>
+        </Switch>
+      </main>
+    </Router>
   </Provider>
     </div>
   </div>,

@@ -2,21 +2,18 @@ import React from 'react';
 import {connect} from 'react-redux';
 import AllPuppies from './AllPuppies';
 import { recievePuppiesThunk } from './action-creators';
+import {Route, Switch} from 'react-router-dom';
 
 class AllPuppiesContainer extends React.Component {
     render(){
         return(
-            <AllPuppies allPups={this.props.allPups} onLoadPuppies={this.props.onLoadPuppies}/>
+            <div>
+                <AllPuppies allPups={this.props.allPups} onLoadPuppies={this.props.onLoadPuppies}/>
+
+            </div>
         );
     }
 }
-
-const hardCodedPuppies = 
-    [
-        { id: 1, name: 'Cody' },
-        { id: 2, name: 'Ben' },
-        { id: 3, name: 'Bubba' }
-    ];
 
 
 const mapStateToProps = (state) => ({
