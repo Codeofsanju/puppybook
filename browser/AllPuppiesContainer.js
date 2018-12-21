@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import AllPuppies from './AllPuppies';
-import { recievePuppies } from './action-creators';
+import { recievePuppiesThunk } from './action-creators';
 
 class AllPuppiesContainer extends React.Component {
     render(){
@@ -24,7 +24,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    onLoadPuppies: function() {dispatch(recievePuppies(hardCodedPuppies));}
+    onLoadPuppies: function() {dispatch(recievePuppiesThunk());}
 });
 
 
