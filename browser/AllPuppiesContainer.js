@@ -2,7 +2,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 import AllPuppies from './AllPuppies';
 import { recievePuppiesThunk } from './action-creators';
-import {Route, Switch} from 'react-router-dom';
 
 class AllPuppiesContainer extends React.Component {
     render(){

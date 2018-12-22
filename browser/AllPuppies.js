@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 export default class AllPuppies extends React.Component {
 
@@ -12,7 +13,7 @@ export default class AllPuppies extends React.Component {
       <div>
         <ul className="list-unstyled">
           {
-            allPups.map(pup => <li key = {pup.id}><a href="#">{pup.name}</a></li>)
+            allPups.map(pup => <li key = {pup.id}><Link to ={`puppies/${pup.id}`}>{pup.name}</Link></li>)
           }
         </ul>
       </div>
