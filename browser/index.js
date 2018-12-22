@@ -14,7 +14,7 @@ ReactDOM.render(
     <Router>
       <main>
         <Switch>
-          <Route exact path = "/puppies" component = {AllPuppiesContainer}/>
+          <Route path = "/puppies" component = {AllPuppiesContainer}/>
         </Switch>
       </main>
     </Router>
