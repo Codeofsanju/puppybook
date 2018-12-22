@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import store from './store';
 import {Provider} from 'react-redux';
 import AllPuppiesContainer from './AllPuppiesContainer';
-import {HashRouter as Router, Switch, Route} from 'react-router-dom';
+import {HashRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
 
 ReactDOM.render(
   <div className="container flexbox-container">
@@ -14,7 +14,8 @@ ReactDOM.render(
     <Router>
       <main>
         <Switch>
-          <Route path = "/puppies" component = {AllPuppiesContainer}/>
+          <Route exact path = "/puppies" component = {AllPuppiesContainer}/>
+          <Redirect from = '/' to = '/puppies'/>
         </Switch>
       </main>
     </Router>
