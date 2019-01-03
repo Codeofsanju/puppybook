@@ -36,7 +36,6 @@ export const recieveSinglePuppyThunk = (id) => {
         try {
             let singlePuppy = await axios.get(`/api/puppies/${id}`);
             singlePuppy = singlePuppy.data;
-            console.log(singlePuppy);
             const action = recieveSinglePuppy(singlePuppy);
             dispatch(action);
         } catch (error) {
